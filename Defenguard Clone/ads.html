@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Website Design 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+</head>
+
+<body>
+
+    <div class="hero-slider">
+
+
+        <div class="header-container">
+            <div class="navbar-wrapper">
+                <div class="header-wrapper">
+                    <img src="./Images/logo-white.png" alt="logo" class="logo">
+                </div>
+
+                <div class="navbar-menu-wrapper">
+                    <ul class="navbar-menu">
+                        <li class="menu-1 menu active"><a href="#">HOME</a></li>
+                        <li class="menu-2 menu"><a href="#">ABOUT COMPANY</a></li>
+                        <li class="menu-3 menu"><a href="#">COMPONENTS</a></li>
+                        <li class="menu-4 menu"><a href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-nav">
+            <div class="nav"></div>
+        </div>
+
+        <div class="slider-container">
+            <div class="arrow l" onclick="prev()">
+                <img src="./Images/less-than.png" alt="left-arrow">
+            </div>
+            <div class="slides">
+
+                <div class="slide slide-2">
+                    <div class="slide-layer-container">
+                        <div class="line">
+                            <hr>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab2 tab"><a href="index.html">ELECTRO OPTICAL SYSTEMS</a></div>
+                            <div class="tab1 tab"><a href="ads.html">ANTI DRONE SYSTEMS</a></div>
+                            <div class="tab3 tab"><a href="spc.html">SPECIAL CLIENT SOLUTIONS</a></div>
+                        </div>
+
+                        <div class="img-flex">
+                            <div class="header">
+                                <div class="layer-text">
+                                    <div class="sub-text">INTEGRATED PROTECTION SYSTEM</div>
+                                    <div class="main-text1 main-text">ANTI</div>
+                                    <div class="main-text2 main-text">DRONE</div>
+                                    <div class="main-text3 main-text">SYSTEMS</div>
+                                </div>
+
+                                <div class="buttons">
+                                    <button class="btn1">ALL PRODUCTS</button>
+                                    <button class="btn2">CONTACT US</button>
+                                </div>
+                            </div>
+
+                            <div class="product-details">
+                                <div class="prod-desc-icon">
+                                    <div class="prod-desc">
+                                        <div class="prod-head">ANTI DRONE SYSTEMS</div>
+                                        <div class="prod-text">protection against aerial threats of all sizes LEARN MORE
+                                            <span class="green-text">LEARN MORE</span>
+                                        </div>
+                                    </div>
+                                    <div class="prod-icon"><img src="./Images/eye-icon.png" alt="camera-icon"></div>
+                                </div>
+                                <div class="prod-img">
+                                    <img class="img2" src="./Images/l3productv2.png" alt="product">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slide slide-3">
+                    <div class="slide-layer-container">
+                        <div class="line">
+                            <hr>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab4 tab"><a href="index.html">ELECTRO OPTICAL SYSTEMS</a></div>
+                            <div class="tab2 tab"><a href="ads.html">ANTI DRONE SYSTEMS</a></div>
+                            <div class="tab1 tab"><a href="spc.html">SPECIAL CLIENT SOLUTIONS</a></div>
+                        </div>
+
+                        <div class="img-flex">
+                            <div class="header">
+                                <div class="layer-text">
+                                    <div class="sub-text">INTEGRATED PROTECTION SYSTEM</div>
+                                    <div class="main-text1 main-text">SPECIAL</div>
+                                    <div class="main-text2 main-text">CLIENT</div>
+                                    <div class="main-text3 main-text">SOLUTIONS</div>
+                                </div>
+
+                                <div class="buttons">
+                                    <button class="btn1">ALL PRODUCTS</button>
+                                    <button class="btn2">CONTACT US</button>
+                                </div>
+                            </div>
+
+                            <div class="product-details">
+                                <div class="prod-desc-icon">
+                                    <div class="prod-desc">
+                                        <div class="prod-head">SPECIAL CLIENT SOLUTIONS</div>
+                                        <div class="prod-text">highly specialized devices for specific applications LEARN MORE
+                                            <span class="green-text">LEARN MORE</span>
+                                        </div>
+                                    </div>
+                                    <div class="prod-icon"><img src="./Images/bullseye-solid.svg" alt="camera-icon"></div>
+                                </div>
+                                <div class="prod-img">
+                                    <img class="img3" src="./Images/l3product.png" alt="product">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slide slide-1">
+                    <div class="slide-layer-container">
+                        <div class="line">
+                            <hr>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab1 tab"><a href="index.html">ELECTRO OPTICAL SYSTEMS</a></div>
+                            <div class="tab2 tab"><a href="ads.html">ANTI DRONE SYSTEMS</a></div>
+                            <div class="tab3 tab"><a href="spc.html">SPECIAL CLIENT SOLUTIONS</a></div>
+                        </div>
+
+                        <div class="img-flex">
+                            <div class="header">
+                                <div class="layer-text">
+                                    <div class="sub-text">INTEGRATED PROTECTION SYSTEM</div>
+                                    <div class="main-text1 main-text">ELECTRO</div>
+                                    <div class="main-text2 main-text">OPTICAL</div>
+                                    <div class="main-text3 main-text">SYSTEMS</div>
+                                </div>
+
+                                <div class="buttons">
+                                    <button class="btn1">ALL PRODUCTS</button>
+                                    <button class="btn2">CONTACT US</button>
+                                </div>
+                            </div>
+
+                            <div class="product-details">
+                                <div class="prod-desc-icon">
+                                    <div class="prod-desc">
+                                        <div class="prod-head">MID TO LONG RANGE ELECTRO OPTICAL SYSTEMS EOS</div>
+                                        <div class="prod-text">visual surveillance under all weather conditions
+                                            <span class="green-text">LEARN MORE</span>
+                                        </div>
+                                    </div>
+                                    <div class="prod-icon"><img src="./Images/camera-icon.svg" alt="camera-icon"></div>
+                                </div>
+                                <div class="prod-img">
+                                    <img class="img" src="./Images/l2productv2.png" alt="product">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="arrow r" onclick="next()">
+                <img src="./Images/greater-than.png" alt="right-arrow">
+            </div>
+        </div>
+    </div>
+
+    <div class="bxo" style="width: 500px; height: 500;">
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
