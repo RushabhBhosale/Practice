@@ -65,12 +65,12 @@
 
         <button onclick="
         updateCalculation('.');
-
       ">.</button>
 
         <button onclick="
         calculation = eval(calculation);
         console.log(calculation);
+        localStorage.setItem('calculation', calculation);
       ">=</button>
 
         <button onclick="
@@ -82,15 +82,22 @@
         <button onclick="
         calculation = '';
         console.log(calculation);
+        localStorage.setItem('calculation', calculation);
       ">Clear</button>
     </p>
 
     <script>
-        let calculation = '';
+        let calculation = localStorage.getItem('calculation') || '';
+
 
         function updateCalculation(value) {
             calculation += value;
             console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+        }
+
+        function saveCalculation () {
+          localStorage.setItem('calculation', calculation);
         }
 
     </script>
