@@ -10,28 +10,40 @@
 <body>
    <script>
       let gender = 'male';
-      let age = 6;
+      let age;
       let finalDiscount;
 
-      if (gender === 'female') {
-         if (age <= 5) {
-            finalDiscount = '100%'
-         } else {
-            finalDiscount = '50%'
+      function checkingDiscount() {
+
+         if (age === undefined) {
+            return 'Invalid age';
          }
-      } else if (gender === 'male') {
-         if (age <= 5) {
-            finalDiscount = '100%';
-         } else if (age > 5 && age <= 8) {
-            finalDiscount = '50%';
-         } else if (age > 65) {
-            finalDiscount = '30%';
-         } else {
-            finalDiscount = 'No Discount';
+
+         if (gender === 'female') {
+            if (age <= 5) {
+               finalDiscount = "100%"
+            }
+            else {
+               finalDiscount = '50%'
+            }
+         } else if (gender === 'male') {
+            if (age <= 5) {
+               finalDiscount = "100%"
+            }
+            else if (age > 5 && age <= 8) {
+               finalDiscount = '50%';
+            } else if (age > 65) {
+               finalDiscount = '30%';
+            } else {
+               finalDiscount = 'No Discount';
+            }
          }
+         return finalDiscount;
       }
 
-      console.log(finalDiscount)
+      let result = checkingDiscount();
+
+      console.log(result)
 
 
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Reversed array</title>
+</head>
+
+<body>
+   <script>
+      let array = [10, 14, 3, 12, 48, 35];
+      let position = 2;
+      let newElement = 400;
+
+      console.log(array)
+      for (let i = array.length - 1; i >= 0; i--) {
+         // console.warn(array[i])
+         if (i >= position) {
+            array[i + 1] = array[i];
+            if (i == position) {
+               array[i] = newElement;
+            }
+         }
+      }
+      console.log(array)
+
+   </script>
+</body>
+
+</html>
