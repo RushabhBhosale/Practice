@@ -1,0 +1,22 @@
+#calculator {
+   width: 250px;
+   border: 1px solid black;
+   border-radius: 5px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 20px;
+   align-items: center;
+   margin: auto;
+}
+
+.display {
+   width: 90%;
+}
+
+.buttons-container button {
+   border: 1px solid black;
+   padding: 12px 18px;
+   border-radius: 2px;
+   margin: 10px;
+}

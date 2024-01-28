@@ -1,0 +1,11 @@
+.products {
+   display: flex;
+}
+
+.product {
+   width: 30%;
+}
+
+.prod-img img {
+   width: 50%;
+}

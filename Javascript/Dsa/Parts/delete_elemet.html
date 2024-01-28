@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Remove Element</title>
+   <script>
+
+      function removeEl() {
+         let data = [1, 3, 4, 67, 88, 21];
+         let position = document.querySelector('.position').value;
+         position = parseInt(position)
+
+         for (let i = position; i < data.length - 1; i++) {
+            if (i >= position) {
+               data[i] = data[i + 1]
+            }
+         }
+         data.length = data.length - 1;
+         console.log(data)
+
+      }
+
+   </script>
+</head>
+
+<body>
+   <input type="text" placeholder="position" class="position">
+   <button onclick="removeEl()">Remove</button>
+</body>
+
+</html>

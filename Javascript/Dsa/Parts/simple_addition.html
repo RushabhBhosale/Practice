@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<script>
+
+   function simpleAddition(num) {
+      if (num < 1 || num > 1000) {
+         return "please provide a valid number"
+      }
+      let sum= 0;
+      for (let i = 0; i <=num; i++) {
+         sum += i;
+      }
+      return sum;
+   }
+
+   document.write(simpleAddition(-1))
+
+</script>
+<body>
+   
+</body>
+</html>
