@@ -3,7 +3,6 @@ import {
    MDBCard,
    MDBCardBody,
    MDBCardHeader,
-   MDBCardImage,
    MDBCol,
    MDBContainer,
    MDBIcon,
@@ -12,10 +11,9 @@ import {
    MDBListGroupItem,
    MDBRipple,
    MDBRow,
-   MDBTooltip,
    MDBTypography,
 } from "mdb-react-ui-kit";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal, removeItem } from '../features/CartSLice';
 
@@ -27,7 +25,7 @@ export default function PaymentMethods() {
 
    useEffect(() => {
       dispatch(getCartTotal());
-   }, [cart])
+   }, [cart, dispatch])
 
    return (
       <section className="h-100 gradient-custom">
@@ -41,55 +39,57 @@ export default function PaymentMethods() {
                         </MDBTypography>
                      </MDBCardHeader>
                      {cart.map((data) => (
-                        <MDBCardBody>
-                           <MDBRow>
-                              <MDBCol lg="3" md="12" className="mb-4 mb-lg-0">
-                                 <MDBRipple rippleTag="div" rippleColor="light"
-                                    className="bg-image rounded hover-zoom hover-overlay">
-                                    <img
-                                       src={data.img}
-                                       className="w-100" />
-                                    <a href="#!">
-                                       <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
-                                       </div>
-                                    </a>
-                                 </MDBRipple>
-                              </MDBCol>
+                        <>
+                           <MDBCardBody>
+                              <MDBRow>
+                                 <MDBCol lg="3" md="12" className="mb-4 mb-lg-0">
+                                    <MDBRipple rippleTag="div" rippleColor="light"
+                                       className="bg-image rounded hover-zoom hover-overlay">
+                                       <img
+                                          src={data.img}
+                                          className="w-100" />
+                                       <a href="#!">
+                                          <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)", }}>
+                                          </div>
+                                       </a>
+                                    </MDBRipple>
+                                 </MDBCol>
 
-                              <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
-                                 <p>
-                                    <strong>{data.title}</strong>
-                                 </p>
+                                 <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
+                                    <p>
+                                       <strong>{data.title}</strong>
+                                    </p>
 
-                                 <button
-                                    type="button"
-                                    className="btn btn-primary btn-sm me-1 mb-2"
-                                    data-mdb-toggle="tooltip"
-                                    title="Remove item"
-                                    onClick={() => dispatch(removeItem(data.id))}
-                                 >
-                                    <i className="fas fa-trash"></i>
-                                 </button>
-                              </MDBCol>
-                              <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
-                                 <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
-                                    <MDBBtn className="px-3 me-2">
-                                       <MDBIcon fas icon="minus" />
-                                    </MDBBtn>
+                                    <button
+                                       type="button"
+                                       className="btn btn-primary btn-sm me-1 mb-2"
+                                       data-mdb-toggle="tooltip"
+                                       title="Remove item"
+                                       onClick={() => dispatch(removeItem(data.id))}
+                                    >
+                                       <i className="fas fa-trash"></i>
+                                    </button>
+                                 </MDBCol>
+                                 <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
+                                    <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
+                                       <MDBBtn className="px-3 me-2">
+                                          <MDBIcon fas icon="minus" />
+                                       </MDBBtn>
 
-                                    <MDBInput defaultValue={data.quantity} min={0} type="number" label="Quantity" />
+                                       <MDBInput defaultValue={data.quantity} min={0} type="number" label="Quantity" />
 
-                                    <MDBBtn className="px-3 ms-2">
-                                       <MDBIcon fas icon="plus" />
-                                    </MDBBtn>
-                                 </div>
+                                       <MDBBtn className="px-3 ms-2">
+                                          <MDBIcon fas icon="plus" />
+                                       </MDBBtn>
+                                    </div>
 
-                                 <p className="text-start text-md-center">
-                                    <strong>{data.price}</strong>
-                                 </p>
-                              </MDBCol>
-                           </MDBRow>
-                        </MDBCardBody>
+                                    <p className="text-start text-md-center">
+                                       <strong>{data.price}</strong>
+                                    </p>
+                                 </MDBCol>
+                              </MDBRow>
+                           </MDBCardBody>
+                        </>
                      ))}
                   </MDBCard>
                </MDBCol>

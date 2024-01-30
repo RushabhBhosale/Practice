@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+      function countLetters(sentence) {
+         let smallLetters = 0;
+         let capitalLetters = 0;
+
+         for (let i = 0; i< sentence.length; i++) {
+            const currentChar = sentence.charAt(i);
+
+            if (currentChar >= "A" && currentChar <= "Z") {
+               capitalLetters ++;
+            } else {
+               smallLetters ++;
+            }
+         }
+         return {capitalLetters, smallLetters}
+      }
+
+      let sentence = "Hello RURURjghvgv";
+      const result = countLetters(sentence)
+
+      console.log(result)
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
