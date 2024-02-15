@@ -35,12 +35,35 @@
 //    console.log(pattern);
 // }
 
-let array = [1, 3, 4, 5, 6, 7, 8];
+// let array = [1, 3, 4, 5, 6, 7, 8];
 
-function findMissingNum(num) {
-   const n = num.length + 1;
-   let expectedSum = (n * (n + 1) / 2);
-   let actualSum = num.reduce((a,b) => a + b)
+// function findMissingNum(num) {
+//    const n = num.length + 1;
+//    let expectedSum = (n * (n + 1) / 2);
+//    let actualSum = num.reduce((a,b) => a + b, 0)
 
-   let missingNumber
-}
+//    let missingNumber = expectedSum - actualSum;
+//    return missingNumber
+// }
+
+// let result = findMissingNum(array);
+// console.log(result);
+
+// let property = "First Name";
+// let name = "Rushabh";
+
+// let user = {
+//    [property] : name,
+// }
+
+// console.log(user)
+
+// let user = {
+//    name: "rushabh",
+//    age: 23,
+//    gender: "M"
+// }
+
+// for (key in user) {
+//    console.log(user[key])
+// }
